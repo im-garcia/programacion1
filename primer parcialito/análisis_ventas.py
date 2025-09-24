@@ -26,7 +26,7 @@ def leer_ventas(nombre_archivo):
         return ventas
     except FileNotFoundError:
         print("No existe el archivo o la ruta al archivo es incorrecta.")
-        return {}
+        return []
 
 # Ejercicio 2
 
