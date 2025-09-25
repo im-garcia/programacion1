@@ -1,10 +1,10 @@
 import random
 
 def tirar(cant_dados):
-    return [ random.randint(1,6) for i in range(cant_dados) ]
+    return [ random.randint(1,6) for _ in range(cant_dados) ]
 
 def es_generala(tirada):
-    return len(tirada) == len(set(tirada))
+    return len(set(tirada)) == 1
 
 def mas_repetido(dados):
     cant = []
@@ -15,7 +15,7 @@ def mas_repetido(dados):
     return num_repetido + 1
 
 def jugar_mano_tres_tiradas():
-    tirada = tirar(6)
+    tirada = tirar(5)
     for i in range(2):
         if es_generala(tirada):
             return True
@@ -25,14 +25,8 @@ def jugar_mano_tres_tiradas():
         tirada = dados_guardados + dados_nuevos
     return es_generala(tirada)
 
-def prog_generala(N):
-    G = sum([jugar_mano_tres_tiradas() for i in range(N)])
+def prob_generala(N):
+    G = sum([jugar_mano_tres_tiradas() for _ in range(N)])
     prob = G/N
-    print(f'Tiré {N} manos de tres jugadas, de las cuales {G} saqué generala servida.')
-    print(f'Podemos estimar la probabilidad de sacar generala no necesariamente servida mediante {prob:.6f}.')
-
     return prob
 
-N = 100
-prob = prog_generala(N)
-print(prob)
