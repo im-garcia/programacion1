@@ -15,7 +15,6 @@ def simulación_cum(N, tamaño_grupo):
     prob = G/N
     return prob
 
-
 N = 100000
 for i in range(1, 80):
     if simulación_cum(N, i) > 0.5:
