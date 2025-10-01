@@ -1,7 +1,10 @@
 import random
+import numpy as np
 
 def medir_temp(n):
-    return [random.normalvariate(37.5, 0.2) for _ in range(n)]
+    temps = [random.normalvariate(37.5, 0.2) for _ in range(n)]
+    np.save('../Data/temperaturas', temps)
+    return temps
 
 def resumen_temp(n):
     temps = medir_temp(n)
