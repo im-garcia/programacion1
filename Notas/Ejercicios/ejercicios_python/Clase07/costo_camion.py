@@ -1,4 +1,3 @@
-import csv
 import informe_funciones
 
 def costo_camion(nombre_archivo):
