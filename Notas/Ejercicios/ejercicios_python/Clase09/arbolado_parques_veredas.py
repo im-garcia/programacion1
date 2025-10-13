@@ -10,7 +10,6 @@ df_tipas_veredas = df_veredas[df_veredas['nombre_cientifico'] == 'Tipuana tipu']
 
 df_tipas_parques = df_tipas_parques.rename(columns={
     'altura_tot': 'altura',
-    'diametro': 'diametro',
     'nombre_cie': 'nombre_cientifico'
 })
 
