@@ -1,4 +1,3 @@
-import csv
 import fileparse
 
 def leer_camion(nombre_archivo):
